@@ -16,20 +16,24 @@ jobs:
     - name: package
       run: |
         touch aaa.txt
-        echo 'aaa' > aaa.txt
+        echo 'aaa' > bbb.txt
         echo `pwd`
         echo `ls -a`
 
     - name: commit and push
       run: |
+        git config --global user.name 'Fixfly'
+        git config --global user.email 'fixfly-1010@fixfly.com'
+        git add .
+        git commit -m 'add build aritifacts'
+        git push origin main
+        
         echo `pwd`
         echo `ls -a`
         cd ../../
         git clone https://github.com/Fixfly-SS/MpvKit.git
         cd MpvKit
-        mv ../test/test/aaa.txt ./
-        git config --global user.name 'Fixfly'
-        git config --global user.email 'fixfly-1010@fixfly.com'
+        mv ../test/test/bbb.txt ./
         git add .
         git commit -m 'add build aritifacts'
         git push origin main
