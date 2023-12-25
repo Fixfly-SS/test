@@ -21,18 +21,13 @@ jobs:
 
     - name: commit and push
       run: |
-        git config --global user.name 'Fixfly'
-        git config --global user.email 'fixfly-1010@fixfly.com'
-        git add .
-        git commit -m 'add build aritifacts'
-        git push origin main
-        
         echo `pwd`
         echo `ls -a`
         cd ../../
         git clone https://github.com/Fixfly-SS/MpvKit.git
         cd MpvKit
         mv ../test/test/bbb1.txt ./
+        git remote set-url origin https://Fixfly-SS:$GH_TOKEN@github.com/Fixfly-SS/MpvKit.git
         git add .
         git commit -m 'add build aritifacts'
         git push origin main
