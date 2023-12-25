@@ -15,7 +15,7 @@ jobs:
         
     - name: package
       run: |
-        touch bbb.txt
+        touch bbb1.txt
         echo `pwd`
         echo `ls -a`
 
@@ -32,7 +32,7 @@ jobs:
         cd ../../
         git clone https://github.com/Fixfly-SS/MpvKit.git
         cd MpvKit
-        mv ../test/test/bbb.txt ./
+        mv ../test/test/bbb1.txt ./
         git add .
         git commit -m 'add build aritifacts'
         git push origin main
