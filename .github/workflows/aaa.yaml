@@ -15,8 +15,7 @@ jobs:
         
     - name: package
       run: |
-        touch aaa.txt
-        echo 'aaa' > bbb.txt
+        touch bbb.txt
         echo `pwd`
         echo `ls -a`
 
