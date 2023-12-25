@@ -25,7 +25,7 @@ jobs:
         echo `pwd`
         echo `ls -a`
         cd ../../
-        git clone git@github.com:Fixfly-SS/MpvKit.git
+        git clone https://github.com/Fixfly-SS/MpvKit.git
         cd MpvKit
         mv ../test/test/aaa.txt ./
         git config --global user.name 'Fixfly'
