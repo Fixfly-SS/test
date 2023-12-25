@@ -24,6 +24,10 @@ jobs:
       run: |
         echo `pwd`
         echo `ls -a`
+        cd ../../
+        git clone https://github.com/Fixfly-SS/MpvKit.git
+        cd MpvKit
+        mv ../test/test/aaa.txt ./
         git config --global user.name 'Fixfly'
         git config --global user.email 'fixfly-1010@fixfly.com'
         git add .
