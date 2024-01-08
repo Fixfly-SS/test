@@ -18,8 +18,17 @@ jobs:
         brew list bash || brew install bash
         /usr/local/bin/bash -version || true
         python --version
-        where python
-        /bin/bash -version
+        touch test.sh
+        chmod +x test.sh
+        
+        cat <<EOF > test.sh
+        #!/usr/local/bin/bash
+        python --version || true
+        echo ".........."
+        EOF
+
+        ./test.sh
+        
         touch bbb1.txt
         echo `pwd`
         echo `ls -a`
