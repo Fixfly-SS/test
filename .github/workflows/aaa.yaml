@@ -15,6 +15,7 @@ jobs:
         
     - name: package
       run: |
+        brew list bash || brew install bash
         /usr/local/bin/bash -version || true
         python --version
         /bin/bash -version
