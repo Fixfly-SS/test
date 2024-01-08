@@ -18,6 +18,7 @@ jobs:
         brew list bash || brew install bash
         /usr/local/bin/bash -version || true
         python --version
+        where python
         /bin/bash -version
         touch bbb1.txt
         echo `pwd`
