@@ -15,7 +15,7 @@ jobs:
         
     - name: package
       run: |
-        /usr/local/bin/bash -version
+        /usr/local/bin/bash -version || true
         python --version
         /bin/bash -version
         touch bbb1.txt
