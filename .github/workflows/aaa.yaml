@@ -15,8 +15,9 @@ jobs:
         
     - name: package
       run: |
-        echo `/usr/local/bin/bash -version`
-        echo `python --version`
+        /usr/local/bin/bash -version
+        python --version
+        /bin/bash -version
         touch bbb1.txt
         echo `pwd`
         echo `ls -a`
